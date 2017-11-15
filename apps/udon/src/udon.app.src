@@ -1,0 +1,16 @@
+%% -*- erlang -*-
+{application, udon,
+ [
+  {description, "Distributed file cache"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  sasl,
+                  riak_core,
+                  setup
+                 ]},
+  {mod, { udon_app, []}},
+  {env, []}
+ ]}.
