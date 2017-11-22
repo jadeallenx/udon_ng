@@ -9,6 +9,18 @@ of work on dependencies.
 
 This was first presented at [Erlang and Elixir Factory Lite Bengalore 2017][1].
 
+Building a docker image
+-----------------------
+One easy way to get a collection of rebar3, Erlang 19 and the udon code together into a run time environment, is to use the included Dockerfile.  To build a docker image, you can execute the following commands:
+
+    $ docker build -t <USERNAME>/udon .
+    $ docker run -it <USERNAME>/udon bash
+    root@de8b68cfa169:/# cd /root/udon
+    root@de8b68cfa169:~/udon# rebar3 release
+    root@de8b68cfa169:~/udon# make console
+    
+The hash value of your Docker container after `root@` may not match the example here. That's ok.
+
 Build
 -----
 
